@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function greet() {
+            let regexEmail = /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+            let emailer = document.getElementById('email1');
+            if (regexEmail.test(emailer.value) === false) {
+                alert('go eat a dick');
+            }
+            else {
+                alert('Thank you for your question! We will be in touch!');
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="contactForm" onsubmit="greet(); reset(); return false;">
+        <input type="text" id="email1">
+        <input type="submit" id="submit">
+    </form>
+</body>
+</html>
